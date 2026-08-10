@@ -206,7 +206,7 @@ export const InquireSection: React.FC = () => {
           {/* Right Column: Architectural Image (50% Width) */}
           <div className="relative min-h-[400px] lg:min-h-[580px] overflow-hidden group">
             <RevealImage
-              src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=75"
+              src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=85"
               alt="Elvara Living Studio Consultation Space"
               direction="right"
               duration={1.0}

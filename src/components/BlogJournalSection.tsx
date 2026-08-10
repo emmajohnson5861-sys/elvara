@@ -24,7 +24,7 @@ const ARTICLES: Article[] = [
     category: 'INTERIOR ARCHITECTURE',
     title: 'THE ART OF LIVED-IN MINIMALISM',
     readTime: '5 MIN READ',
-    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=600&q=75',
+    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1000&q=85',
     excerpt: 'Exploring how subtle textures, natural light, and intentional negative space create homes that feel serene yet deeply personal.',
     content: [
       'Minimalism is often misunderstood as cold or austere. At Elvara Living, we champion "lived-in minimalism"—an approach that honors clean architectural lines while embracing the warmth of human presence.',
@@ -38,7 +38,7 @@ const ARTICLES: Article[] = [
     category: 'MATERIALITY & STYLING',
     title: 'ORGANIC TEXTURES & NATURAL PALETTES',
     readTime: '4 MIN READ',
-    image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=75',
+    image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=85',
     excerpt: 'A guide to curating travertine, oiled walnut, and unlacquered brass to establish a grounding connection with the natural world.',
     content: [
       'Materiality forms the emotional baseline of any interior. When we touch a polished travertine tabletop or step onto honed limestone, our senses align with nature.',

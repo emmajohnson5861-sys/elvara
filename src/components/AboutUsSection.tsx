@@ -23,7 +23,7 @@ export const AboutUsSection: React.FC<AboutUsSectionProps> = ({ onLearnMore, isL
         <div className="lg:col-span-6">
           <div className="relative w-full aspect-[4/3] sm:aspect-[16/11] overflow-hidden">
             <RevealImage
-              src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=75"
+              src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=85"
               alt="Elvara Living Crafting Spaces"
               direction="left"
               start="top 90%"

@@ -15,31 +15,31 @@ const MATERIALS: MaterialSwatch[] = [
     name: 'LIMESTONE',
     color: '#E3D7C7',
     description: 'Soft textured natural pale stone interior',
-    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=75',
+    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85',
   },
   {
     name: 'TRAVERTINE',
     color: '#C9B598',
     description: 'Porous warm beige stone interior',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=75',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85',
   },
   {
     name: 'OAK',
     color: '#A07246',
     description: 'Warm honey-toned oak dining interior',
-    image: 'https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=800&q=75',
+    image: 'https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=1200&q=85',
   },
   {
     name: 'WALNUT',
     color: '#3D281B',
     description: 'Rich dark espresso walnut living interior',
-    image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=75',
+    image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=85',
   },
   {
     name: 'LINEN',
     color: '#D9CCC0',
     description: 'Organic unbleached linen upholstered interior',
-    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=75',
+    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1200&q=85',
   },
 ];
 
