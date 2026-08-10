@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Preloader } from './components/Preloader';
 import { Navbar } from './components/Navbar';
 import { HeroBannerSlider } from './components/HeroBannerSlider';
 import { AboutUsSection } from './components/AboutUsSection';
@@ -17,6 +18,7 @@ import { SIGNATURE_PROPERTIES } from './data/properties';
 import { Property } from './types';
 
 export default function App() {
+  const [isLoaded, setIsLoaded] = useState(false);
   const [activeNavSection, setActiveNavSection] = useState('hero');
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
@@ -24,11 +26,15 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#FAF7F2] text-[#18181B] flex flex-col font-sans selection:bg-[#9A6A42] selection:text-white">
+      {/* Site Preloader */}
+      <Preloader onComplete={() => setIsLoaded(true)} />
+
       {/* Top Navbar */}
       <Navbar
         onOpenBooking={() => setIsBookingOpen(true)}
         activeSection={activeNavSection}
         setActiveSection={setActiveNavSection}
+        isLoaded={isLoaded}
       />
 
       {/* Main Content Sections with exact 100px gap between sections */}
@@ -38,6 +44,7 @@ export default function App() {
           properties={SIGNATURE_PROPERTIES}
           onOpenPropertyDetail={(prop) => setSelectedProperty(prop)}
           onOpenBooking={() => setIsBookingOpen(true)}
+          isLoaded={isLoaded}
         />
 
         {/* About Us Section */}

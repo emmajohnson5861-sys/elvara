@@ -37,11 +37,11 @@ export const InquireSection: React.FC = () => {
 
   return (
     <section id="inquire" className="w-full bg-[#FAF7F2] py-12 lg:py-20 scroll-mt-20 overflow-hidden">
-      <div className="w-full pl-6 sm:pl-8 lg:pl-[max(2rem,calc((100vw-80rem)/2+3rem))] pr-0">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-stretch">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-stretch">
           
-          {/* Left Column: Form Fields (Inner Width Aligned) */}
-          <div className="lg:col-span-7 pr-6 sm:pr-8 lg:pr-12 flex flex-col justify-between py-2">
+          {/* Left Column: Form Fields (50% Width) */}
+          <div className="flex flex-col justify-between py-2">
             <div>
               {/* Section Header */}
               <div className="mb-8">
@@ -203,12 +203,13 @@ export const InquireSection: React.FC = () => {
             </ScrollReveal>
           </div>
 
-          {/* Right Column: Clean Architectural Image Flush to Right Edge */}
-          <div className="lg:col-span-5 relative min-h-[400px] lg:min-h-[580px] overflow-hidden group">
+          {/* Right Column: Architectural Image (50% Width) */}
+          <div className="relative min-h-[400px] lg:min-h-[580px] overflow-hidden group">
             <RevealImage
               src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=85"
               alt="Elvara Living Studio Consultation Space"
               direction="right"
+              duration={1.0}
               className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
             />
           </div>

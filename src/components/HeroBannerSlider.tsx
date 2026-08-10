@@ -9,16 +9,17 @@ interface HeroBannerSliderProps {
   properties: Property[];
   onOpenPropertyDetail: (property: Property) => void;
   onOpenBooking: () => void;
+  isLoaded?: boolean;
 }
 
 export const HeroBannerSlider: React.FC<HeroBannerSliderProps> = ({
   properties,
   onOpenPropertyDetail,
   onOpenBooking,
+  isLoaded = true,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [prevIndex, setPrevIndex] = useState<number | null>(null);
-  const [selectedSwatchIndex, setSelectedSwatchIndex] = useState(1);
 
   // Dragging state for cursor sliding
   const [isDragging, setIsDragging] = useState(false);
@@ -110,28 +111,38 @@ export const HeroBannerSlider: React.FC<HeroBannerSliderProps> = ({
       className="relative pt-24 sm:pt-28 pb-0 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto flex flex-col justify-center select-none"
     >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-        {/* Left Column - Minimalist Elegant Typography */}
-        <div className="lg:col-span-4 flex flex-col justify-between space-y-10 z-10">
+        {/* Left Column - Minimalist Elegant Typography with Parallax Entrance */}
+        <div
+          className={`lg:col-span-4 flex flex-col justify-between space-y-10 z-10 transition-all duration-1000 ease-out delay-200 ${
+            !isLoaded ? 'opacity-0 translate-y-12' : 'opacity-100 translate-y-0'
+          }`}
+        >
           <div>
-            {/* Main Display Headline with Word Slide-Up on every slide change */}
-            <AnimatedHeading
-              key={`hero-heading-${currentIndex}`}
-              text={currentProperty.headline}
-              as="h1"
-              scrollTrigger={false}
-              className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-[#18181B] leading-[1.12] mb-4"
-            />
+            {/* Main Display Headline with Word Slide-Up on every slide change & load */}
+            <div className="min-h-[96px] sm:min-h-[120px] lg:min-h-[180px] flex flex-col justify-end transition-[min-height,height] duration-500 ease-out mb-4">
+              {isLoaded && (
+                <AnimatedHeading
+                  key={`hero-heading-${currentIndex}-${isLoaded}`}
+                  text={currentProperty.headline}
+                  as="h1"
+                  scrollTrigger={false}
+                  className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-[#18181B] leading-[1.12]"
+                />
+              )}
+            </div>
 
             {/* Subtitle with Letter Slide Right-to-Left on every slide change */}
-            <AnimatedBodyText
-              key={`hero-sub-${currentIndex}`}
-              text="Find your perfect space."
-              scrollTrigger={false}
-              delay={0.1}
-              className="text-xs sm:text-sm text-[#666055] font-medium tracking-wide mb-8"
-            />
+            {isLoaded && (
+              <AnimatedBodyText
+                key={`hero-sub-${currentIndex}-${isLoaded}`}
+                text="Find your perfect space."
+                scrollTrigger={false}
+                delay={0.1}
+                className="text-xs sm:text-sm text-[#666055] font-medium tracking-wide mb-8"
+              />
+            )}
 
-            {/* Exact Same Action Buttons as Previously */}
+            {/* Action Buttons */}
             <div className="flex flex-wrap items-center gap-4">
               <button
                 onClick={() => onOpenPropertyDetail(currentProperty)}
@@ -149,29 +160,14 @@ export const HeroBannerSlider: React.FC<HeroBannerSliderProps> = ({
               </button>
             </div>
           </div>
-
-          {/* Color Swatch Dots - Exact row of circular swatches */}
-          <div className="flex items-center gap-3.5 pt-4">
-            {currentProperty.swatches.map((swatch, idx) => (
-              <button
-                key={idx}
-                onClick={() => setSelectedSwatchIndex(idx)}
-                title={`${swatch.name} — ${swatch.material}`}
-                className={`relative w-6 h-6 rounded-full transition-all duration-200 cursor-pointer shadow-xs ${
-                  selectedSwatchIndex === idx
-                    ? 'ring-2 ring-offset-2 ring-[#18181B]'
-                    : 'opacity-80 hover:opacity-100'
-                }`}
-                style={{ backgroundColor: swatch.hex }}
-              >
-                <span className="sr-only">{swatch.name}</span>
-              </button>
-            ))}
-          </div>
         </div>
 
-        {/* Right Featured Image Column - Clean GSAP Wiping Image Banner */}
-        <div className="lg:col-span-8 relative">
+        {/* Right Featured Image Column - Parallax Scale & Reveal Entrance */}
+        <div
+          className={`lg:col-span-8 relative transition-all duration-1000 ease-out delay-400 ${
+            !isLoaded ? 'opacity-0 scale-[0.96] translate-y-8' : 'opacity-100 scale-100 translate-y-0'
+          }`}
+        >
           <div
             onPointerDown={handlePointerDown}
             onPointerMove={handlePointerMove}

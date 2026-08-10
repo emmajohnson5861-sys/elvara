@@ -5,9 +5,10 @@ interface NavbarProps {
   onOpenBooking: () => void;
   activeSection: string;
   setActiveSection: (section: string) => void;
+  isLoaded?: boolean;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking, activeSection, setActiveSection }) => {
+export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking, activeSection, setActiveSection, isLoaded = true }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -58,7 +59,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking, activeSection, se
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-1000 cubic-bezier(0.16, 1, 0.3, 1) ${
+        !isLoaded
+          ? '-translate-y-full opacity-0'
+          : 'translate-y-0 opacity-100'
+      } ${
         scrolled
           ? 'bg-[#FAF7F2]/95 backdrop-blur-md py-3 shadow-xs'
           : 'bg-[#FAF7F2] py-5'
