@@ -64,7 +64,7 @@ export const FloorPlanModal: React.FC<FloorPlanModalProps> = ({
         <div className="p-6 sm:p-8 overflow-y-auto space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             {/* Visual Floor Plan Render */}
-            <div className="md:col-span-7 relative aspect-[4/3] rounded-2xl overflow-hidden bg-[#E8E2D9] border border-[#C4AD93]/40 shadow-inner">
+            <div className="md:col-span-7 relative aspect-[4/3] rounded-2xl overflow-hidden border border-[#C4AD93]/40 shadow-inner">
               <img
                 src={currentPlan?.image || property.heroImage}
                 alt={currentPlan?.title}

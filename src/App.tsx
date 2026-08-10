@@ -48,7 +48,7 @@ export default function App() {
         />
 
         {/* About Us Section */}
-        <AboutUsSection onLearnMore={() => setIsBookingOpen(true)} />
+        <AboutUsSection onLearnMore={() => setIsBookingOpen(true)} isLoaded={isLoaded} />
 
         {/* Shop By Room Inspiration Section */}
         <ShopByRoomSection />

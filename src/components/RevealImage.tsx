@@ -13,6 +13,7 @@ interface RevealImageProps {
   direction?: 'up' | 'down' | 'left' | 'right' | 'none';
   delay?: number;
   duration?: number;
+  start?: string;
 }
 
 export const RevealImage: React.FC<RevealImageProps> = ({
@@ -24,6 +25,7 @@ export const RevealImage: React.FC<RevealImageProps> = ({
   direction = 'up',
   delay = 0,
   duration = 0.85,
+  start = 'top 70%',
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
@@ -66,7 +68,7 @@ export const RevealImage: React.FC<RevealImageProps> = ({
       if (containerRef.current) {
         animateVars.scrollTrigger = {
           trigger: containerRef.current,
-          start: 'top 88%',
+          start: start,
           toggleActions: 'play none none none',
         };
       }
@@ -75,7 +77,7 @@ export const RevealImage: React.FC<RevealImageProps> = ({
     }, containerRef);
 
     return () => ctx.revert();
-  }, [src, direction, delay, duration]);
+  }, [src, direction, delay, duration, start]);
 
   return (
     <div ref={containerRef} className={aspectRatioClass}>

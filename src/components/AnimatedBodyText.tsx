@@ -11,6 +11,7 @@ interface AnimatedBodyTextProps {
   delay?: number;
   stagger?: number;
   scrollTrigger?: boolean;
+  start?: string;
 }
 
 export const AnimatedBodyText: React.FC<AnimatedBodyTextProps> = ({
@@ -20,6 +21,7 @@ export const AnimatedBodyText: React.FC<AnimatedBodyTextProps> = ({
   delay = 0,
   stagger = 0.008,
   scrollTrigger = true,
+  start = 'top 70%',
 }) => {
   const containerRef = useRef<HTMLElement>(null);
 
@@ -40,7 +42,7 @@ export const AnimatedBodyText: React.FC<AnimatedBodyTextProps> = ({
       if (scrollTrigger) {
         config.scrollTrigger = {
           trigger: containerRef.current,
-          start: 'top 88%',
+          start: start,
           toggleActions: 'play none none none',
         };
       }
@@ -53,7 +55,7 @@ export const AnimatedBodyText: React.FC<AnimatedBodyTextProps> = ({
     }, containerRef);
 
     return () => ctx.revert();
-  }, [text, delay, stagger, scrollTrigger]);
+  }, [text, delay, stagger, scrollTrigger, start]);
 
   const words = text.split(' ');
 

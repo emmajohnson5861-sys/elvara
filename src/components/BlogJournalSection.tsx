@@ -102,7 +102,7 @@ export const BlogJournalSection: React.FC = () => {
                   className="group cursor-pointer flex flex-col"
                 >
                   {/* Image Box */}
-                  <div className="w-full aspect-[4/5] sm:aspect-[1/1] lg:aspect-[4/5] overflow-hidden bg-[#EAE4DC] relative mb-5">
+                  <div className="w-full aspect-[4/5] sm:aspect-[1/1] lg:aspect-[4/5] overflow-hidden relative mb-5">
                     <RevealImage
                       src={article.image}
                       alt={article.title}
@@ -179,7 +179,7 @@ export const BlogJournalSection: React.FC = () => {
                   {selectedArticle.title}
                 </h2>
 
-                <div className="aspect-[16/9] w-full overflow-hidden bg-[#EAE4DC] my-6">
+                <div className="aspect-[16/9] w-full overflow-hidden my-6">
                   <img
                     src={selectedArticle.image}
                     alt={selectedArticle.title}

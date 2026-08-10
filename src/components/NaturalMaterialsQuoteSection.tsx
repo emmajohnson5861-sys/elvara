@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { AnimatedHeading } from './AnimatedHeading';
+import { ScrollReveal } from './ScrollReveal';
 
 interface MaterialSwatch {
   name: string;
@@ -116,52 +117,59 @@ export const NaturalMaterialsQuoteSection: React.FC = () => {
 
           {/* Right Column: Natural Materials Palette */}
           <div className="py-10 sm:py-14 pl-4 sm:pl-8 md:pl-10 lg:pl-12 flex flex-col justify-center space-y-8">
-            <div className="space-y-1">
-              <h3 className="text-[11px] font-semibold tracking-[0.25em] text-[#524E48] uppercase">
-                NATURAL MATERIALS
-              </h3>
-            </div>
+            <ScrollReveal direction="up" delay={0.1}>
+              <div className="space-y-1">
+                <h3 className="text-[11px] font-semibold tracking-[0.25em] text-[#524E48] uppercase">
+                  NATURAL MATERIALS
+                </h3>
+              </div>
+            </ScrollReveal>
 
             <div className="space-y-4">
               {MATERIALS.map((mat, idx) => {
                 const isSelected = idx === activeMaterial;
                 return (
-                  <button
+                  <ScrollReveal
                     key={mat.name}
-                    onClick={() => handleSelectMaterial(idx)}
-                    className="w-full flex items-center justify-between group cursor-pointer text-left py-1"
+                    direction="up"
+                    delay={0.15 + idx * 0.08}
                   >
-                    <div className="flex items-center gap-3">
-                      {/* Color Circle Swatch */}
-                      <span
-                        className={`w-9 h-9 rounded-full border transition-all duration-300 shrink-0 ${
-                          isSelected
-                            ? 'ring-2 ring-offset-2 ring-[#18181B] scale-105 border-[#18181B] shadow-md'
-                            : 'border-[#524E48]/30 group-hover:scale-105 shadow-xs'
-                        }`}
-                        style={{ backgroundColor: mat.color }}
-                      />
-                      <div className="flex flex-col">
+                    <button
+                      onClick={() => handleSelectMaterial(idx)}
+                      className="w-full flex items-center justify-between group cursor-pointer text-left py-1"
+                    >
+                      <div className="flex items-center gap-3">
+                        {/* Color Circle Swatch */}
                         <span
-                          className={`text-sm font-semibold tracking-[0.18em] transition-colors duration-300 ${
+                          className={`w-9 h-9 rounded-full border transition-all duration-300 shrink-0 ${
                             isSelected
-                              ? 'text-[#18181B]'
-                              : 'text-[#524E48] group-hover:text-[#18181B]'
+                              ? 'ring-2 ring-offset-2 ring-[#18181B] scale-105 border-[#18181B] shadow-md'
+                              : 'border-[#524E48]/30 group-hover:scale-105 shadow-xs'
                           }`}
-                        >
-                          {mat.name}
-                        </span>
-                        <span className="text-xs text-[#666055] font-light leading-snug">
-                          {mat.description}
-                        </span>
+                          style={{ backgroundColor: mat.color }}
+                        />
+                        <div className="flex flex-col">
+                          <span
+                            className={`text-sm font-semibold tracking-[0.18em] transition-colors duration-300 ${
+                              isSelected
+                                ? 'text-[#18181B]'
+                                : 'text-[#524E48] group-hover:text-[#18181B]'
+                            }`}
+                          >
+                            {mat.name}
+                          </span>
+                          <span className="text-xs text-[#666055] font-light leading-snug">
+                            {mat.description}
+                          </span>
+                        </div>
                       </div>
-                    </div>
 
-                    {/* Active State Indicator Dot */}
-                    {isSelected && (
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#18181B] shrink-0 ml-2" />
-                    )}
-                  </button>
+                      {/* Active State Indicator Dot */}
+                      {isSelected && (
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#18181B] shrink-0 ml-2" />
+                      )}
+                    </button>
+                  </ScrollReveal>
                 );
               })}
             </div>

@@ -11,6 +11,7 @@ interface AnimatedHeadingProps {
   delay?: number;
   stagger?: number;
   scrollTrigger?: boolean;
+  start?: string;
 }
 
 export const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({
@@ -20,6 +21,7 @@ export const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({
   delay = 0,
   stagger = 0.04,
   scrollTrigger = true,
+  start = 'top 70%',
 }) => {
   const containerRef = useRef<HTMLElement>(null);
 
@@ -40,7 +42,7 @@ export const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({
       if (scrollTrigger) {
         config.scrollTrigger = {
           trigger: containerRef.current,
-          start: 'top 88%',
+          start: start,
           toggleActions: 'play none none none',
         };
       }
@@ -53,7 +55,7 @@ export const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({
     }, containerRef);
 
     return () => ctx.revert();
-  }, [text, delay, stagger, scrollTrigger]);
+  }, [text, delay, stagger, scrollTrigger, start]);
 
   const lines = text.split('\n');
 

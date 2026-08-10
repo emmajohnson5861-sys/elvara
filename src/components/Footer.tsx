@@ -23,7 +23,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 space-y-12">
         
         {/* Top Subscribe Bar (Matching Reference Layout) */}
-        <ScrollReveal direction="up" delay={0.1}>
+        <ScrollReveal direction="up" delay={0.1} start="top 90%">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-12 border-b border-[#E2DACF]">
             <div className="space-y-1.5 max-w-lg">
               <h3 className="font-serif text-2xl sm:text-3xl text-[#18181B] font-medium tracking-tight">
@@ -66,7 +66,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12 pt-4">
           
           {/* Brand & Copyright Column */}
-          <ScrollReveal direction="up" delay={0.15} className="col-span-2 md:col-span-1 space-y-4">
+          <ScrollReveal direction="up" delay={0.15} start="top 90%" className="col-span-2 md:col-span-1 space-y-4">
             <div className="font-serif text-3xl font-medium tracking-tight text-[#18181B] lowercase">
               elvara
             </div>
@@ -82,7 +82,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
           </ScrollReveal>
 
           {/* Column 1: SERVICES / PRODUCT */}
-          <ScrollReveal direction="up" delay={0.25} className="space-y-3">
+          <ScrollReveal direction="up" delay={0.25} start="top 90%" className="space-y-3">
             <h4 className="text-[11px] font-mono tracking-[0.2em] uppercase font-semibold text-[#18181B]">
               SERVICES
             </h4>
@@ -96,7 +96,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
           </ScrollReveal>
 
           {/* Column 2: COMPANY */}
-          <ScrollReveal direction="up" delay={0.35} className="space-y-3">
+          <ScrollReveal direction="up" delay={0.35} start="top 90%" className="space-y-3">
             <h4 className="text-[11px] font-mono tracking-[0.2em] uppercase font-semibold text-[#18181B]">
               COMPANY
             </h4>
@@ -118,7 +118,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
           </ScrollReveal>
 
           {/* Column 3: HELP & PROCESS */}
-          <ScrollReveal direction="up" delay={0.45} className="space-y-3">
+          <ScrollReveal direction="up" delay={0.45} start="top 90%" className="space-y-3">
             <h4 className="text-[11px] font-mono tracking-[0.2em] uppercase font-semibold text-[#18181B]">
               HELP
             </h4>
@@ -140,7 +140,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
           </ScrollReveal>
 
           {/* Column 4: SOCIAL */}
-          <ScrollReveal direction="up" delay={0.55} className="space-y-3">
+          <ScrollReveal direction="up" delay={0.55} start="top 90%" className="space-y-3">
             <h4 className="text-[11px] font-mono tracking-[0.2em] uppercase font-semibold text-[#18181B]">
               SOCIAL
             </h4>

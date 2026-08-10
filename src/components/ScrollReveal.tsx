@@ -11,6 +11,7 @@ interface ScrollRevealProps {
   duration?: number;
   y?: number;
   direction?: 'up' | 'down' | 'left' | 'right' | 'none';
+  start?: string;
 }
 
 export const ScrollReveal: React.FC<ScrollRevealProps> = ({
@@ -20,6 +21,7 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({
   duration = 0.85,
   y = 35,
   direction = 'up',
+  start = 'top 70%',
 }) => {
   const elRef = useRef<HTMLDivElement>(null);
 
@@ -46,7 +48,7 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({
           ease: 'power3.out',
           scrollTrigger: {
             trigger: elRef.current,
-            start: 'top 88%',
+            start: start,
             toggleActions: 'play none none none',
           },
         }
@@ -54,7 +56,7 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({
     }, elRef);
 
     return () => ctx.revert();
-  }, [delay, duration, y, direction]);
+  }, [delay, duration, y, direction, start]);
 
   return (
     <div ref={elRef} className={className}>

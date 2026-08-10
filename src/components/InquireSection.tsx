@@ -36,12 +36,12 @@ export const InquireSection: React.FC = () => {
   };
 
   return (
-    <section id="inquire" className="w-full bg-[#FAF7F2] py-12 lg:py-20 scroll-mt-20 overflow-hidden">
+    <section id="inquire" className="w-full bg-[#FAF7F2] py-0 scroll-mt-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-stretch">
           
           {/* Left Column: Form Fields (50% Width) */}
-          <div className="flex flex-col justify-between py-2">
+          <div className="flex flex-col justify-between py-0">
             <div>
               {/* Section Header */}
               <div className="mb-8">

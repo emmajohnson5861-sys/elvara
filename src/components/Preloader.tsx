@@ -25,11 +25,13 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
 
   return (
     <div
-      className={`fixed inset-0 z-[100] bg-[#FAF7F2] text-[#18181B] flex flex-col items-center justify-center select-none transition-all duration-700 ease-out ${
-        isFadingOut ? 'opacity-0 pointer-events-none scale-102' : 'opacity-100'
+      className={`fixed inset-0 z-[100] bg-[#FAF7F2] text-[#18181B] flex flex-col items-center justify-center select-none transition-all duration-800 [transition-timing-function:cubic-bezier(0.76,0,0.24,1)] ${
+        isFadingOut ? 'opacity-0 -translate-y-full pointer-events-none' : 'opacity-100 translate-y-0'
       }`}
     >
-      <div className="flex flex-col items-center space-y-6">
+      <div className={`flex flex-col items-center space-y-6 transition-all duration-700 ease-in-out ${
+        isFadingOut ? '-translate-y-12 opacity-0' : 'translate-y-0 opacity-100'
+      }`}>
         {/* Minimalist Animated Loading Circle */}
         <div className="relative w-10 h-10 flex items-center justify-center">
           <div className="absolute inset-0 rounded-full border-2 border-[#E2DACF]" />

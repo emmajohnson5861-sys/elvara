@@ -207,7 +207,7 @@ export const WaysWeWorkSection: React.FC = () => {
                       <div
                         key={`col1-${item.id}-${index}`}
                         onClick={() => handleOpenLightbox(item)}
-                        className="group relative aspect-[3/4] overflow-hidden bg-[#DDD6C9] cursor-pointer"
+                        className="group relative aspect-[3/4] overflow-hidden cursor-pointer"
                       >
                         <img
                           src={item.image}
@@ -230,7 +230,7 @@ export const WaysWeWorkSection: React.FC = () => {
                       <div
                         key={`col2-${item.id}-${index}`}
                         onClick={() => handleOpenLightbox(item)}
-                        className="group relative aspect-[3/4] overflow-hidden bg-[#DDD6C9] cursor-pointer"
+                        className="group relative aspect-[3/4] overflow-hidden cursor-pointer"
                       >
                         <img
                           src={item.image}
@@ -253,7 +253,7 @@ export const WaysWeWorkSection: React.FC = () => {
                       <div
                         key={`col3-${item.id}-${index}`}
                         onClick={() => handleOpenLightbox(item)}
-                        className="group relative aspect-[3/4] overflow-hidden bg-[#DDD6C9] cursor-pointer"
+                        className="group relative aspect-[3/4] overflow-hidden cursor-pointer"
                       >
                         <img
                           src={item.image}

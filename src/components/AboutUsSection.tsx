@@ -6,26 +6,34 @@ import { AnimatedBodyText } from './AnimatedBodyText';
 
 interface AboutUsSectionProps {
   onLearnMore?: () => void;
+  isLoaded?: boolean;
 }
 
-export const AboutUsSection: React.FC<AboutUsSectionProps> = ({ onLearnMore }) => {
+export const AboutUsSection: React.FC<AboutUsSectionProps> = ({ onLearnMore, isLoaded = true }) => {
   return (
-    <section id="about" className="py-0 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto">
+    <section
+      id="about"
+      className={`py-0 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto transition-opacity duration-500 ${
+        !isLoaded ? 'opacity-0' : 'opacity-100'
+      }`}
+      key={`about-sec-${isLoaded}`}
+    >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
         {/* Left Column: Architectural Interior Image */}
         <div className="lg:col-span-6">
-          <div className="relative w-full aspect-[4/3] sm:aspect-[16/11] bg-[#E8E2D9] overflow-hidden border border-[#E8E2D9]">
+          <div className="relative w-full aspect-[4/3] sm:aspect-[16/11] overflow-hidden">
             <RevealImage
               src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=85"
               alt="Elvara Living Crafting Spaces"
               direction="left"
+              start="top 90%"
             />
           </div>
         </div>
 
         {/* Right Column: Editorial Text Content */}
         <div className="lg:col-span-6 flex flex-col justify-center space-y-6">
-          <ScrollReveal direction="up" delay={0.1}>
+          <ScrollReveal direction="up" delay={0.1} start="top 90%">
             {/* Eyebrow Label with Horizontal Line */}
             <div className="flex items-center gap-3">
               <span className="text-[11px] font-semibold tracking-[0.25em] text-[#524E48] uppercase">
@@ -39,15 +47,17 @@ export const AboutUsSection: React.FC<AboutUsSectionProps> = ({ onLearnMore }) =
           <AnimatedHeading
             text={"Crafting Spaces\nThat Reflect You"}
             className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#18181B] font-medium leading-[1.18] tracking-tight"
+            start="top 90%"
           />
 
           {/* Body Copy with Animated Letters Sliding Right to Left */}
           <AnimatedBodyText
             text="At Elvara Living, we believe every space has the potential to tell a story. Our approach combines thoughtful design, premium materials and meticulous attention to detail."
             className="text-sm sm:text-base text-[#666055] font-normal leading-relaxed max-w-lg"
+            start="top 90%"
           />
 
-          <ScrollReveal direction="up" delay={0.4}>
+          <ScrollReveal direction="up" delay={0.4} start="top 90%">
             {/* Black Rectangular Action Button */}
             <div className="pt-2">
               <button

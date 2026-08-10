@@ -30,7 +30,7 @@ export const PropertyDetailModal: React.FC<PropertyDetailModalProps> = ({
         </button>
 
         {/* Gallery Hero Viewer */}
-        <div className="relative aspect-[16/9] w-full bg-[#18181B] overflow-hidden">
+        <div className="relative aspect-[16/9] w-full overflow-hidden">
           <img
             src={allImages[activeImageIndex]}
             alt={`${property.name} slide ${activeImageIndex + 1}`}

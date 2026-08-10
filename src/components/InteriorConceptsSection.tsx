@@ -32,7 +32,7 @@ export const InteriorConceptsSection: React.FC = () => {
           <div
             key={concept.id}
             onClick={() => setSelectedConcept(concept)}
-            className="group relative rounded-3xl overflow-hidden aspect-[3/4] bg-[#18181B] cursor-pointer shadow-md hover:shadow-2xl transition-all duration-500 flex flex-col justify-end p-6 border border-[#E8E2D9]"
+            className="group relative rounded-3xl overflow-hidden aspect-[3/4] cursor-pointer shadow-md hover:shadow-2xl transition-all duration-500 flex flex-col justify-end p-6 border border-[#E8E2D9]"
           >
             {/* Background Image with Directional Fade */}
             <RevealImage
