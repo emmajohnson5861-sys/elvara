@@ -18,25 +18,25 @@ const GALLERY_IMAGES: GalleryItem[] = [
     id: 'col1-1',
     title: 'Custom Oak Cabinetry & Kitchen',
     category: 'New Construction',
-    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1000&q=85',
+    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=500&q=75',
   },
   {
     id: 'col1-2',
     title: 'Minimalist Monolithic Dining Nook',
     category: 'Full Home Remodel',
-    image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=85',
+    image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=500&q=75',
   },
   {
     id: 'col1-3',
     title: 'Luxe Travertine Bathroom & Tub',
     category: 'Furniture & Styling',
-    image: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1000&q=85',
+    image: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=500&q=75',
   },
   {
     id: 'col1-4',
     title: 'Serene Upholstered Bedroom Suite',
     category: 'New Construction',
-    image: 'https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=1000&q=85',
+    image: 'https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=500&q=75',
   },
 
   // Column 2
@@ -44,25 +44,25 @@ const GALLERY_IMAGES: GalleryItem[] = [
     id: 'col2-1',
     title: 'Minimal Entryway & Slat Wood Wall',
     category: 'Full Home Remodel',
-    image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1000&q=85',
+    image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=500&q=75',
   },
   {
     id: 'col2-2',
     title: 'Cream Curved Velvet Sofa Lounge',
     category: 'Furniture & Styling',
-    image: 'https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=1000&q=85',
+    image: 'https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=500&q=75',
   },
   {
     id: 'col2-3',
     title: 'Travertine Marble Console & Arch',
     category: 'New Construction',
-    image: 'https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=1000&q=85',
+    image: 'https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=500&q=75',
   },
   {
     id: 'col2-4',
     title: 'Fluted Wood Kitchen Island Detail',
     category: 'Full Home Remodel',
-    image: 'https://images.unsplash.com/photo-1616137466211-f939a420be84?auto=format&fit=crop&w=1000&q=85',
+    image: 'https://images.unsplash.com/photo-1616137466211-f939a420be84?auto=format&fit=crop&w=500&q=75',
   },
 
   // Column 3
@@ -70,25 +70,25 @@ const GALLERY_IMAGES: GalleryItem[] = [
     id: 'col3-1',
     title: 'Architectural Arch Interior Corridor',
     category: 'Furniture & Styling',
-    image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85',
+    image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=500&q=75',
   },
   {
     id: 'col3-2',
     title: 'Linen Armchair & Sunlit Reading Nook',
     category: 'New Construction',
-    image: 'https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=1000&q=85',
+    image: 'https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=500&q=75',
   },
   {
     id: 'col3-3',
     title: 'High Ceiling Vaulted Great Room',
     category: 'Full Home Remodel',
-    image: 'https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1000&q=85',
+    image: 'https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=500&q=75',
   },
   {
     id: 'col3-4',
     title: 'Terracotta Tile Modern Powder Room',
     category: 'Furniture & Styling',
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85',
+    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=500&q=75',
   },
 ];
 

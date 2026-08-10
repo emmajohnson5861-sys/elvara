@@ -15,7 +15,7 @@ export const LivedInDesignSection: React.FC = () => {
           <div className="lg:col-span-6 relative flex justify-center lg:justify-start">
             <div className="w-full max-w-lg lg:max-w-none aspect-[3/4] overflow-hidden">
               <RevealImage
-                src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=85"
+                src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=75"
                 alt="Architectural Home Interior Entryway with Wooden Door and Vaulted Ceiling"
                 direction="left"
               />
@@ -29,7 +29,7 @@ export const LivedInDesignSection: React.FC = () => {
             <div className="flex justify-end w-full mb-8 lg:mb-12">
               <div className="w-44 sm:w-56 lg:w-64 aspect-[4/3] overflow-hidden">
                 <RevealImage
-                  src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=85"
+                  src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=500&q=75"
                   alt="Curated Bathroom Vanity Interior Detail"
                   direction="right"
                 />

@@ -195,6 +195,7 @@ export const HeroBannerSlider: React.FC<HeroBannerSliderProps> = ({
               src={currentProperty.heroImage}
               alt={currentProperty.name}
               referrerPolicy="no-referrer"
+              fetchPriority="high"
               className="absolute inset-0 w-full h-full object-cover object-center z-10 will-change-transform"
             />
           </div>
